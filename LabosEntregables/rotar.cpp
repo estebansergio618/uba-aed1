@@ -4,13 +4,14 @@
 using namespace std;
 
 vector<int> rotar(vector<int> v, int k){
-	vector<int> res;
-	int i = 0;
-	while (i < v.size()){
-		res.push_back(v[(k+1)%v.size()]);
-		i= i + 1;
-	}
-	return res;   
+    vector<int> res = {};
+    int long_v = v.size();
+    int i = 0;
+    while (i != long_v){
+        res.push_back(v[(k+i)%long_v]);
+        i = i + 1;
+    }
+    return res;
 }
 
 int main() {
